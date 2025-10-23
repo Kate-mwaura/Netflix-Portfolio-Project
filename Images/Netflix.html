@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+      background-color: #000000;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .movie-card img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .movie-card img:hover {
+      transform: scale(1.1);
+    }
+    .video-hero {
+    height: 100vh; 
+    width: 100%;        
+    object-fit: cover;    
+}
+
+#carouselExampleAutoplaying {
+  margin-top: 0;
+  position: relative;
+  top: 0;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 0 !important;
+  
+}
+#carouselExampleAutoplaying {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+</style>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color: rgba(0, 0, 0, 0.7);">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">
+      <img src="./30.jfif" alt="Logo" width="60" height="35">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active text-white" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">TV Shows</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Movies</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Games</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">New & Popular</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">My List</a></li>
+      </ul>
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Languages
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">Swahili</a></li>
+          <li><a class="dropdown-item" href="#">Hindi</a></li>
+          <li><a class="dropdown-item" href="#">German</a></li>
+        </ul>
+      </div>
+
+      <form class="d-flex ms-auto" role="search" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <div></div>
+       <a class="navbar-brand text-white" href="#">
+      <img src="./45.jfif" alt="Logo" width="55" height="45">
+    </a>
+    </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block w-100 video-hero" autoplay muted loop>
+        <source src="./46.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!--Slide 1-->
+<div class="container py-5">
+  <h2 class="mb-4">Popular on Netflix</h2>
+
+  <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- First Slide -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./1.jfif" class="d-block w-100" alt="Movie 1">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./10.jfif" class="d-block w-100" alt="Movie 2">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./11.jfif" class="d-block w-100" alt="Movie 3">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./12.jfif" class="d-block w-100" alt="Movie 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./13.jfif" class="d-block w-100" alt="Movie 5">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./14.jfif" class="d-block w-100" alt="Movie 6">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./15.jfif" class="d-block w-100" alt="Movie 7">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./16.jfif" class="d-block w-100" alt="Movie 8">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</div>
+
+<!--Slide 2 -->
+<div class="container py-5">
+  <h2 class="mb-4">Continue Watching</h2>
+
+  <div id="movieCarouselKenya" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- First Slide -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./31.jfif" class="d-block w-100" alt="Movie 1">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./18.jfif" class="d-block w-100" alt="Movie 2">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./19.jfif" class="d-block w-100" alt="Movie 3">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./2.jfif" class="d-block w-100" alt="Movie 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./20.jfif" class="d-block w-100" alt="Movie 5">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./21.jfif" class="d-block w-100" alt="Movie 6">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./22.jfif" class="d-block w-100" alt="Movie 7">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./23.jfif" class="d-block w-100" alt="Movie 8">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarouselKenya" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarouselKenya" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</div>
+
+
+<!--Slide 3 -->
+<div class="container py-5">
+  <h2 class="mb-4">Top 10 Movies in Kenya</h2>
+
+  <div id="movieCarouselKenyaTop10" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- First Slide -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./3.jfif" class="d-block w-100" alt="Movie 1">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./25.jfif" class="d-block w-100" alt="Movie 2">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./26.jfif" class="d-block w-100" alt="Movie 3">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./27.jfif" class="d-block w-100" alt="Movie 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./28.jfif" class="d-block w-100" alt="Movie 5">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./29.jfif" class="d-block w-100" alt="Movie 6">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./24.jfif" class="d-block w-100" alt="Movie 7">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./32.jfif" class="d-block w-100" alt="Movie 8">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarouselKenyaTop10" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarouselKenyaTop10" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+</div>
+
+
+<!--Slide 4 -->
+<div class="container py-5">
+  <h2 class="mb-4">Because You Watched Walking Dead</h2>
+
+  <div id="movieCarouselWalkingDead" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- First Slide -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./41.jfif" class="d-block w-100" alt="Movie 1">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./34.jfif" class="d-block w-100" alt="Movie 2">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./35.jfif" class="d-block w-100" alt="Movie 3">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./36.jfif" class="d-block w-100" alt="Movie 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3 movie-card">
+            <img src="./37.jfif" class="d-block w-100" alt="Movie 5">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./38.jfif" class="d-block w-100" alt="Movie 6">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./39.jfif" class="d-block w-100" alt="Movie 7">
+          </div>
+          <div class="col-md-3 movie-card">
+            <img src="./40.jfif" class="d-block w-100" alt="Movie 8">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarouselWalkingDead" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarouselWalkingDead" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
