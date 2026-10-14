@@ -1,0 +1,7 @@
+[build]
+  publish = "Images"
+
+[[redirects]]
+  from = "/"
+  to = "/Netflix.html"
+  status = 200
